@@ -1,48 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Виш-Клуб — Авто Галерея</title>
+    <title>Виш-Клуб — Наши встречи</title>
+
     <link rel="stylesheet" href="../Main/Header.css">
-    <link rel="stylesheet" href="./Galery.css">
-    <meta name="description" content="Авто клуб машин в Бишкеке. Встречи, тюнинг, заезды, общение — присоединяйся!">
+    <link rel="stylesheet" href="./Meetings.css">
+
+    <meta name="description" content="Авто клуб машин в Бишкеке. Фото с наших встреч.">
 </head>
 <body>
-    <header class="header">
+
+
+<header class="header">
     <div class="navigation">
         <div class="logo">
-            <img src="../image/Wish11 (1).png" alt="Логотип">
+            <img src="../image/Wish11 (1).png" alt="Логотип Wish Club">
         </div>
 
-        
         <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
         <label for="burger-checkbox" class="burger"></label>
 
         <ul class="menu-list">
             <li><a href="../index.html" class="menu-item">Главная</a></li>
-            <li><a href="#" class="menu-item">Галерея</a></li>
-            <li><a href="../Meetings/Meetings.html" class="menu-item">Наши встречи</a></li>
-            <li><a href="../Rules/Rules.html" class="menu-item">Правила клуба</a></li>
+            <li><a href="../Galery/index.html" class="menu-item">Галерея</a></li>
+            <li><a href="#" class="menu-item active">Наши встречи</a></li>
+            <li><a href="../Rules/index.html" class="menu-item">Правила клуба</a></li>
         </ul>
     </div>
 </header>
 
 
-<main class="gallery_page">
+<main class="meetings_page">
+    <h1 class="meetings_title">Наши встречи</h1>
 
-    <h1 class="gallery_title">Галерея Wish Club</h1>
-
-    <section class="gallery" id="gallery">
-       
+    <section class="gallery">
+        <h2>Фото с встреч</h2>
+        <div class="gallery_items" id="photo_gallery">
+      
+        </div>
     </section>
 
 
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
-        <img class="lightbox_img" src="" alt="">
+        <img class="lightbox_img" src="" alt="Просмотр фото">
     </div>
-
 </main>
 
 
@@ -60,9 +64,9 @@
         <div class="footer_block">
             <h3>Навигация</h3>
             <a href="../index.html">Главная</a>
-            <a href="#">Галерея</a>
-            <a href="../Meetings/Meetings.html">Наши встречи</a>
-            <a href="../Rules/Rules.html">Правила клуба</a>
+            <a href="../Galery/index.html">Галерея</a>
+            <a href="#">Наши встречи</a>
+            <a href="../Rules/index.html">Правила клуба</a>
         </div>
 
         <div class="footer_block">
@@ -78,6 +82,8 @@
     </div>
 </footer>
 
-    <script src="./galery.js"></script>
+
+<script src="./Meetings.js"></script>
+
 </body>
 </html>
