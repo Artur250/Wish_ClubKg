@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+body{
+    background-color: rgb(20, 19, 19);
+}
+
+.navigation{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.logo > img{
+    width: 350px;
+    height: 150px;
+}
+
+/* --- Бургер --- */
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.burger {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 2;
+    display: block;
+}
+
+.burger::before,
+.burger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff; /* неоновый цвет */
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.burger::before {
+    top: 0;
+    box-shadow: 0 10px 0 #ffffff;
+}
+
+.burger::after {
+    bottom: 0;
+}
+
+.burger-checkbox:checked + .burger::before {
+    top: 10px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 0 transparent;
+}
+
+.burger-checkbox:checked + .burger::after {
+    bottom: 10px;
+    transform: rotate(-45deg);
+}
+
+/* --- Меню --- */
+.menu-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    background-color: rgb(20, 19, 19);
+    list-style: none;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #e6f7ff;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    color: #00d9ff;
+    text-shadow: 0 0 8px #00d9ff;
+}
+
+/* Показать меню при нажатии */
+.burger-checkbox:checked ~ .menu-list {
+    transform: translateX(0);
+}
+
+/* --- Скрыть бургер на десктопе --- */
+@media(min-width: 1025px){
+    .burger, .burger-checkbox {
+        display: none;
+    }
+    .menu-list{
+        position: static;
+        transform: none;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        padding: 0;
+        gap: 30px;
+        display: flex;
+    }
+}
+@media(max-width: 475px){
+    .logo > img{
+        width: 230px;
+        height: 100px;
+    }
+    
+}
+@media(max-width: 360px){
+    .logo > img{
+       display: none;
+    }
+   
+    
+}
