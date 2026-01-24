@@ -7,8 +7,9 @@ const closeBtn = document.querySelector('.close');
 const photos = [];
 
 for (let i = 1; i <= 19; i++) {
-    photos.push(`../Meetings/photo/${i}.jpg`);
+    photos.push(`meetings_image/${i}.jpg`); 
 }
+
 
 photos.forEach((src, index) => {
     const div = document.createElement('div');
