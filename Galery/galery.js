@@ -2,7 +2,7 @@ const gallery = document.getElementById('gallery');
 
 
 const images = [];
-for(let i=1; i<=25; i++){ 
+for(let i=1; i<=28; i++){ 
     images.push(`./galery_image/${i}.jpg`);
  
 }
